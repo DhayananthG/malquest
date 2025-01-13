@@ -12,7 +12,7 @@
   }
 
   #aboutus-backgrnd {
-    background-color: orange;
+    background-color: rgb(255, 153, 0);
     height: 25vh;
     z-index: 0; /* Set to a lower value */
     position: absolute; /* Ensure it is positioned correctly */
@@ -23,3 +23,5 @@
     z-index: 1; /* Set to a higher value */
     position: relative; /* Ensure it is positioned correctly */
   }
+
+  
