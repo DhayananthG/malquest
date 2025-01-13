@@ -10,3 +10,16 @@
     width: 100%;
     height: 300px; /* Adjust this height as needed */
   }
+
+  #aboutus-backgrnd {
+    background-color: orange;
+    height: 25vh;
+    z-index: 0; /* Set to a lower value */
+    position: absolute; /* Ensure it is positioned correctly */
+    
+  }
+  
+  #aboutus-img {
+    z-index: 1; /* Set to a higher value */
+    position: relative; /* Ensure it is positioned correctly */
+  }

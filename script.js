@@ -57,21 +57,41 @@ sidebarClose.addEventListener('click', () => {      // Close sidebar
 // Select the navbar element
 const navbar = document.getElementById('navbar');
 const sideBar = document.getElementById('sidebarOpen');
+// Select all nav links
+const navLinks = document.querySelectorAll('#navbar a');
+
 // Add an event listener for scrolling
-window.addEventListener('scroll', () => 
-{
-    if (window.scrollY > 50)    // Adjust the scrollY value as needed
-    { 
-        navbar.classList.remove('bg-transparent', 'text-white');    // Remove the transparent background and white text color
-        navbar.classList.add('bg-white', 'shadow-md', 'text-black');    // Add white background, shadow, and black text color
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // Adjust the scrollY value as needed
+        // Change navbar styles
+        navbar.classList.remove('bg-transparent', 'text-white');
+        navbar.classList.add('bg-white', 'shadow-md', 'text-black');
+
+        // Change sidebar icon color
         sideBar.classList.remove('text-white');
         sideBar.classList.add('text-black');
-    } 
-    else 
-    {
-        navbar.classList.remove('bg-white', 'shadow-md', 'text-black');     // Remove the white background, shadow, and black text color
-        navbar.classList.add('bg-transparent', 'text-white');     // Revert back to transparent background and white text color
+
+        // Change nav link text color to black
+        navLinks.forEach(link => {
+            link.classList.remove('text-white');
+            link.classList.add('text-black');
+        });
+    } else {
+        // Revert navbar styles
+        navbar.classList.remove('bg-white', 'shadow-md', 'text-black');
+        navbar.classList.add('bg-transparent', 'text-white');
+
+        // Revert sidebar icon color
         sideBar.classList.remove('text-black');
         sideBar.classList.add('text-white');
+
+        // Revert nav link text color to white
+        navLinks.forEach(link => {
+            link.classList.remove('text-black');
+            link.classList.add('text-white');
+        });
     }
 });
+
+
+
