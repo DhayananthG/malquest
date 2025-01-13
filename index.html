@@ -3,12 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- CSS incorporation  -->
     <link href="/style.css" rel="stylesheet">
     <title>Malquest</title>
 </head>
 <body>
-    <h1 class="text-3xl font-bold underline">
-        Hello, Tailwind CSS!
-    </h1>
+    <section id="home">
+        <div class="h-screen w-[100%] bg-contain fade" >
+        <!-- Navbar -->
+            <nav id="navbar" class="fixed top-0 left-0 z-10 w-full h-20 transition duration-300 bg-transparent">
+                <div class="px-4  py-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                    <div class="flex items-center justify-between">
+                        <!-- JS Mahal Logo -->
+                        <a href="#" class="text-2xl text-whie font-bold text-gray-900">
+                            <img alt="malquest logo" class="w-30 h-30 text-white">
+                        </a>
+            
+                        <!-- Mobile menu button -->
+                        <div class="md:hidden">
+                            <button id="sidebarOpen" class="text-white hover:text-yellow-400 focus:outline-none">
+                                <!-- Hamburger icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+            
+                        <!-- Links for Desktop -->
+                        <div class="items-center hidden md:flex md:space-x-8 text-white playfair-display">
+                            <a href="#home" class="px-3 py-2 font-medium transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md poppins-light">HOME</a>
+                            <a href="#about" class="px-3 py-2 font-medium transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md poppins-light">ABOUT US</a>
+                            <a href="./gallery.html" class="px-3 py-2 font-medium transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md poppins-light">GALLERY</a>
+                            <a href="#facilities" class="px-3 py-2 font-medium transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md poppins-light">FACILITIES</a>
+                            <a href="#amenities" class="px-3 py-2 font-medium transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md poppins-light">AMENITIES</a>
+                            <a href="#contact" class="px-3 py-2 font-medium transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md poppins-light">CONTACT US</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="flex items-center justify-center min-h-screen overflow-hidden main_cover " id="slideshow-container">
+                <!-- Slideshow container -->
+                <div  class="flex items-center justify-center w-full h-full ">
+                    <!-- Text that will be animated -->
+                    <div id="animated-text" class="text-2xl font-bold text-center text-white playfair-display sm:text-3xl md:text-4xl lg:text-5xl"></div>
+                </div>
+            </div>
+    
+            <!-- Sidebar for Mobile -->
+            <div id="sidebar" class="fixed inset-0 z-50 w-64 text-white transition-transform duration-300 ease-in-out transform -translate-x-full bg-black md:hidden">
+                <div class="flex items-center justify-between px-4 py-4 border-b border-gray-700">
+                    <h2 class="text-lg font-bold">Menu</h2>
+                    <!-- Close Button -->
+                    <button id="sidebarClose" class="text-white focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4 space-y-4">
+                    <!-- Links for Sidebar -->
+                    <a href="#home" class="block text-white hover:text-yellow-400 poppins-light">HOME</a>
+                    <a href="#about" class="block text-white hover:text-yellow-400 poppins-light">ABOUT US</a>
+                    <a href="./gallery.html" class="block text-white hover:text-yellow-400 poppins-light">GALLERY</a>
+                    <a href="#facilities" class="block text-white hover:text-yellow-400 poppins-light">FACILITIES</a>
+                    <a href="#amenities" class="block text-white hover:text-yellow-400 poppins-light">AMENITIES</a>
+                    <a href="#contact" class="block text-white hover:text-yellow-400 poppins-light">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+    </section>   
+    
+    <script src="./script.js"></script>
 </body>
 </html>
