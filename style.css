@@ -12,16 +12,36 @@
   }
 
   #aboutus-backgrnd {
-    background-color: rgb(255, 153, 0);
+    background-color: rgb(255, 123, 0);
     height: 25vh;
-    z-index: 0; /* Set to a lower value */
-    position: absolute; /* Ensure it is positioned correctly */
-    
+    z-index: 0; 
+    position: absolute; 
   }
   
   #aboutus-img {
-    z-index: 1; /* Set to a higher value */
-    position: relative; /* Ensure it is positioned correctly */
+    z-index: 1;
+    position: relative;
+  }
+#aboutpara{
+  
+  text-align: justify;
+}
+  #menu3,#aboutpara{
+    transition: 0.5s;
+  }
+  #aboutpara:hover,#menu3:hover{
+    scale: 1.05;
   }
 
-  
+
+  @media only screen and (max-width: 600px) {
+    #aboutus-backgrnd{
+      display: none;
+    }
+    #animated-text{
+      scale: 0.8;
+    }
+    #aboutpara{
+      margin-top: -110px;
+    }
+  }
